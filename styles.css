@@ -158,25 +158,102 @@ img {
 }
 
 /* Carrusel */
-.carousel {
+.carousel-f {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: static;
+    width: 90%;
+    margin: auto;
 }
+
 
 .carousel-container {
     display: flex;
     gap: 10px;
 }
 
-.carousel img {
-    width: 300px;
+.carousel-f img {
+    width: 25%;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-.carousel img:hover {
+.carousel-f img:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
+.content{
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 20px;
+}
+footer{
+    font-size: 20px;
+    color: white;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+/* 
+Estilos de carousel */
+.carousel {
+    margin: auto;
+    width: 65%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+}
+  .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+      
+  }
+  .slide img {
+      width: 100%;
+      height:  300px;
+  }
+  .navigation {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+  }
+  .navigation label {
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  input[type="radio"] {
+      display: none;
+  }
+  #slide1:checked ~ .slides { transform: translateX(0); }
+  #slide2:checked ~ .slides { transform: translateX(-100%); }
+  #s3lide3:checked ~ .slides { transform: translateX(-200%); }
+  
+  .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+  }
+  .buttons button {
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+  }

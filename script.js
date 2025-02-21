@@ -9,3 +9,16 @@ function fixNav () {
         nav.classList.remove('active')
     }
 }
+let currentIndex = 1;
+        function showSlide(index) {
+            document.getElementById(`slide${index}`).checked = true;
+        }
+        function nextSlide() {
+            currentIndex = currentIndex >= 3 ? 1 : currentIndex + 1;
+            showSlide(currentIndex);
+        }
+        function prevSlide() {
+            currentIndex = currentIndex <= 1 ? 3 : currentIndex - 1;
+            showSlide(currentIndex);
+        }
+        setInterval(nextSlide, 3000);
